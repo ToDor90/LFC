@@ -9,3 +9,10 @@ The file GetLFC.py contains a defintion of the machine-learning representation o
 The function G(x,rs,theta) shows how to use the neural net to obtain the static LFC at some specific parameters.
 
 The finite-size corrected PIMC raw data used to train the neural net can be found in the folder "PIMC_data".
+
+The file GetLFC_ESA.py extends the file GetLFC.py by the implementation of the "Effective Static Approximation" (ESA).
+Please cite the ESA as:
+T. Dornheim et al, Phys. Rev. Lett. (2020, in press)
+https://arxiv.org/abs/2008.02165
+
+
