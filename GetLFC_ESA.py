@@ -87,7 +87,7 @@ def OnTop(rs,theta):
 	Qbeta_1_d       = -0.598508    
 	Qbeta_2_d       = 0.513162     
 
-	return 0.5 * ( 1.0 + ( a_Spink + Qalpha_1_a * t  ) / ( 1.0 + t* Qbeta_1_a + t*t*t *Qbeta_2_a ) * np.sqrt(rs) + ( b_Spink + Qalpha_1_b * np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_b + t*t *Qbeta_2_b ) * rs ) / ( 1.0 + ( c_Spink + Qalpha_1_c * np.sqrt(t) + Qalpha_2_c*t*np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_c + t*t *Qbeta_2_c ) * rs + ( d_Spink + Qalpha_1_d * np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_d + t*t *Qbeta_2_d ) * rs*rs*rs )
+	return ( 1.0 + ( a_Spink + Qalpha_1_a * t  ) / ( 1.0 + t* Qbeta_1_a + t*t*t *Qbeta_2_a ) * np.sqrt(rs) + ( b_Spink + Qalpha_1_b * np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_b + t*t *Qbeta_2_b ) * rs ) / ( 1.0 + ( c_Spink + Qalpha_1_c * np.sqrt(t) + Qalpha_2_c*t*np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_c + t*t *Qbeta_2_c ) * rs + ( d_Spink + Qalpha_1_d * np.sqrt(t)  ) / ( 1.0 + t* Qbeta_1_d + t*t *Qbeta_2_d ) * rs*rs*rs )
 
 
 
@@ -98,7 +98,7 @@ def G_ESA( x, xm, eta, rs, theta ):
 	# obtain the exact static limit of the LFC from the neural net:
 	G_ML = G(x,rs,theta)
 	
-	# obtain the value of the total 
+	# obtain the value of the total ontop pdf
 	onTop = 0.5*OnTop( rs, theta ) 
 	
 	# compute the activation function at these parameters
