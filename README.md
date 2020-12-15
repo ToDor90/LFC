@@ -12,7 +12,8 @@ The finite-size corrected PIMC raw data used to train the neural net can be foun
 
 The file GetLFC_ESA.py extends the file GetLFC.py by the implementation of the "Effective Static Approximation" (ESA).
 Please cite the ESA as:
-T. Dornheim et al, Phys. Rev. Lett. (2020, in press)
+T. Dornheim et al, Phys. Rev. Lett. 125, 235001 (2020)
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.125.235001
 https://arxiv.org/abs/2008.02165
 
 
